@@ -11,12 +11,12 @@
     "lint": "node_modules/.bin/eslint src/**",
     "test": "node_modules/.bin/jest"
   },
-  "pre-commit": [
-  ],
+  "pre-commit": [],
   "dependencies": {
     "@blankapp/ui": "file:../ui",
     "@blankapp/ui-pro": "file:../ui-pro",
     "prop-types": "^15.6.1",
+    "query-string": "5.1.1",
     "react": "16.4.0",
     "react-art": "16.4.0",
     "react-dom": "16.4.0",
