@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
 import { NavigationActions, StackActions } from 'react-navigation';
+import getNavigation from 'react-navigation/src/getNavigation';
 
 const getAction = (router, path, params) => {
   const action = router.getActionForPathAndParams(path, params);
@@ -13,8 +13,6 @@ const getAction = (router, path, params) => {
   });
 };
 
-const addListener = () => {};
-
 export default (NavigationAwareView) => {
   const initialAction = getAction(
     NavigationAwareView.router,
@@ -23,28 +21,17 @@ export default (NavigationAwareView) => {
   const initialState = NavigationAwareView.router.getStateForAction(initialAction);
 
   class NavigationContainer extends PureComponent {
-    static childContextTypes = {
-      getActionForPathAndParams: PropTypes.func.isRequired,
-      getURIForAction: PropTypes.func.isRequired,
-      dispatch: PropTypes.func.isRequired,
-    };
     constructor(props) {
       super(props);
 
       this.state = initialState;
+      this.actionEventSubscribers = new Set();
     }
-    getChildContext() {
-      return {
-        getActionForPathAndParams: this.getActionForPathAndParams,
-        getURIForAction: this.getURIForAction,
-        dispatch: this.dispatch,
-      };
-    }
+
     componentDidMount() {
       const navigation = {
         state: this.state.routes[this.state.index],
         dispatch: this.dispatch,
-        addListener,
       };
       const screenOptions = NavigationAwareView.router.getScreenOptions(navigation);
       document.title = screenOptions.title;
@@ -57,6 +44,7 @@ export default (NavigationAwareView) => {
         if (action) this.dispatch(action);
       };
     }
+
     componentWillUpdate(props, state) {
       const {
         path,
@@ -70,11 +58,11 @@ export default (NavigationAwareView) => {
       const navigation = {
         state: state.routes[state.index],
         dispatch: this.dispatch,
-        addListener,
       };
       const screenOptions = NavigationAwareView.router.getScreenOptions(navigation);
       document.title = screenOptions.title;
     }
+
     componentDidUpdate() {
       const {
         params,
@@ -83,6 +71,7 @@ export default (NavigationAwareView) => {
         document.getElementById(params.hash).scrollIntoView();
       }
     }
+
     getURIForAction(action) {
       const state =
         NavigationAwareView.router.getStateForAction(action, this.state) ||
@@ -92,9 +81,11 @@ export default (NavigationAwareView) => {
       } = NavigationAwareView.router.getPathAndParamsForState(state);
       return `/${path}`;
     }
+
     getActionForPathAndParams(path, params) {
       return NavigationAwareView.router.getActionForPathAndParams(path, params);
     }
+
     dispatch = (action) => {
       const state = NavigationAwareView.router.getStateForAction(
         action,
@@ -111,14 +102,18 @@ export default (NavigationAwareView) => {
       }
       return false;
     };
+
     render() {
+      const navigation = getNavigation(
+        NavigationAwareView.router,
+        this.state,
+        this.dispatch,
+        this.actionEventSubscribers,
+      );
+
       return (
         <NavigationAwareView
-          navigation={{
-            state: this.state,
-            dispatch: this.dispatch,
-            addListener,
-          }}
+          navigation={navigation}
         />
       );
     }
