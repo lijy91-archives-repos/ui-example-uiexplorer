@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "homepage": "https://uiexplorer.blankapp.org",
   "scripts": {
+    "postinstall": "./scripts/postinstall.sh",
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "clean": "watchman watch-del-all && rm -rf $TMPDIR/react-* && rm -rf node_modules/ && yarn install",
     "run-android": "node_modules/.bin/react-native run-android",

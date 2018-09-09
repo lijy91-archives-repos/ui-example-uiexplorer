@@ -8,7 +8,7 @@ Table of Contents
   * [Quick Start](#quick-start)
     * [Prerequisites](#prerequisites)
     * [Installation](#installation)
-    * [Run the new app](#run-the-new-app)
+    * [Run the app](#run-the-app)
   * [Discussion](#discussion)
   * [License](#license)
 
@@ -33,25 +33,35 @@ Before starting make sure you have:
 
 ### Installation
 
-Create a new React Native App:
-
-```bash
+```
+$ git clone https://github.com/blankapp/ui.git
+$ cd ui && git checkout develop && cd ../
+$ git clone https://github.com/blankapp/ui-pro.git
+$ cd ui-pro && git checkout develop && cd ../
+$ git clone https://github.com/blankapp/uiexplorer.git
+$ cd uiexplorer
 $ yarn install
 ```
 
-### Run the new app
+### Run the app
 
 - Running on Android
 
 ```bash
-$ react-native run-android
+$ yarn run-android
 $ adb reverse tcp:8081 tcp:8081   # required to ensure the Android app can
 ```
 
 - Running on iOS
 
 ```bash
-$ react-native run-ios
+$ yarn run-ios
+```
+
+- Running on Web
+
+```bash
+$ yarn run-web
 ```
 
 ## Discussion
