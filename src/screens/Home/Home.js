@@ -32,6 +32,11 @@ class Home extends Component {
             routeName: 'DemoActivityIndicator',
           },
           {
+            title: 'Avatar',
+            description: 'Coming soon',
+            routeName: 'DemoAvatar',
+          },
+          {
             title: 'Badge',
             description: 'Small count controls',
             routeName: 'DemoBadge',

@@ -1,10 +1,13 @@
-# UIExplorer
+# @blankapp/uiexplorer
+
+<img width="200" height="200" src="http://blankapp.org/logo.png" alt="@blankapp/ui" align="right">
 
 Table of Contents
 =================
 
   * [Introduction](#introduction)
     * [Features](#features)
+    * [Live Demo](#live-demo)
   * [Quick Start](#quick-start)
     * [Prerequisites](#prerequisites)
     * [Installation](#installation)
@@ -21,6 +24,14 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 ### Features
 
 - Coming soon
+
+
+### Live Demo
+
+[![Live Demo][live-demo-image]][live-demo-url]
+
+[live-demo-image]: http://blankapp.org/assets/images/live_demo_screenshot.png
+[live-demo-url]: http://blankapp.org/docs/#Live-Demo
 
 ## Quick Start
 

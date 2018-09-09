@@ -21,8 +21,8 @@ class DemoScreen extends PureComponent {
       ContentComponent,
     } = this.props;
 
-    const headerView = HeaderComponent();
-    const contentView = ContentComponent();
+    const headerView = HeaderComponent && HeaderComponent();
+    const contentView = ContentComponent && ContentComponent();
 
     const headerStyle = {
       backgroundColor: 'rgba(0, 0, 0, 0.05)',

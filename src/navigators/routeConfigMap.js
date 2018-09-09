@@ -2,6 +2,7 @@ import Home from '../screens/Home';
 import ListOfSlices from '../screens/ListOfSlices';
 import DemoActivityIndicator from '../screens/DemoActivityIndicator';
 import DemoAppBar from '../screens/DemoAppBar';
+import DemoAvatar from '../screens/DemoAvatar';
 import DemoBadge from '../screens/DemoBadge';
 import DemoButton from '../screens/DemoButton';
 import DemoCard from '../screens/DemoCard';
@@ -24,6 +25,7 @@ import DemoViewPager from '../screens/DemoViewPager';
 
 import SliceNoDemo from '../screens/SliceNoDemo';
 import sliceActivityIndicatorRouteConfigMap from '../screens/SliceActivityIndicator/routeConfigMap';
+import sliceAvatarRouteConfigMap from '../screens/SliceAvatar/routeConfigMap';
 import sliceBadgeRouteConfigMap from '../screens/SliceBadge/routeConfigMap';
 import sliceButtonRouteConfigMap from '../screens/SliceButton/routeConfigMap';
 import sliceCardRouteConfigMap from '../screens/SliceCard/routeConfigMap';
@@ -44,6 +46,7 @@ const sliceRouteConfigMap = {
     path: 'slices/no-demo',
   },
   ...sliceActivityIndicatorRouteConfigMap,
+  ...sliceAvatarRouteConfigMap,
   ...sliceBadgeRouteConfigMap,
   ...sliceButtonRouteConfigMap,
   ...sliceCardRouteConfigMap,
@@ -76,13 +79,17 @@ const routeConfigMap = {
     screen: DemoAppBar,
     path: 'demo-appbar',
   },
+  DemoAvatar: {
+    screen: DemoAvatar,
+    path: 'demo-avatar',
+  },
   DemoBadge: {
     screen: DemoBadge,
     path: 'demo-badge',
   },
   DemoButton: {
     screen: DemoButton,
-    path: 'demo-buttons',
+    path: 'demo-button',
   },
   DemoCard: {
     screen: DemoCard,

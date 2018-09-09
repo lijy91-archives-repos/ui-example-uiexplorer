@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { TouchableOpacity } from 'react-native';
+import { FlatList, TouchableOpacity } from 'react-native';
 import {
   Divider,
-  FlatList,
   Screen,
   Subtitle,
   Title,
