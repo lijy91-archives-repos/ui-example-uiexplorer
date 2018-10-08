@@ -33,7 +33,7 @@ class Home extends Component {
           },
           {
             title: 'Avatar',
-            description: 'Coming soon',
+            description: 'Avatar controls',
             routeName: 'DemoAvatar',
           },
           {
