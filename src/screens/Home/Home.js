@@ -62,6 +62,11 @@ class Home extends Component {
             routeName: 'DemoDivider',
           },
           {
+            title: 'Form',
+            description: 'Form controls',
+            routeName: 'DemoForm',
+          },
+          {
             title: 'HyperlinkButton',
             description: 'Like hyperlink buttons',
             routeName: 'DemoHyperlinkButton',

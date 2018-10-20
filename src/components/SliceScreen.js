@@ -7,7 +7,7 @@ class SliceScreen extends PureComponent {
       <View
         {...this.props}
         style={{
-          backgroundColor: '#eee',
+          backgroundColor: '#fafafa',
           flex: 1,
           alignItems: 'center',
           justifyContent: 'center',

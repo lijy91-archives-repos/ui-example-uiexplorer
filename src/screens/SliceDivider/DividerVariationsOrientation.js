@@ -13,7 +13,7 @@ class DividerVariationsOrientation extends Component {
       <SliceScreen>
         <View
           style={{
-            width: 300,
+            width: 375,
             height: 200,
             flexDirection: 'row',
           }}
@@ -26,10 +26,7 @@ class DividerVariationsOrientation extends Component {
               justifyContent: 'center',
             }}
           >
-            <Divider
-              orientation="orizontal"
-              style={{ alignItems: 'center', justifyContent: 'flex-start' }}
-            />
+            <Divider orientation="horizontal" />
           </View>
           <View
             style={{
@@ -38,7 +35,7 @@ class DividerVariationsOrientation extends Component {
               justifyContent: 'center',
             }}
           >
-            <Divider orientation="ertical" />
+            <Divider orientation="vertical" />
           </View>
         </View>
       </SliceScreen>

@@ -47,7 +47,7 @@ class DemoDivider extends Component {
                 justifyContent: 'center',
               }}
             >
-              <Divider orientation="horizontal" style={{ alignItems: 'center', justifyContent: 'flex-start' }} />
+              <Divider orientation="horizontal" />
             </View>
             <View
               style={{

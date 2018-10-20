@@ -42,9 +42,10 @@ class DemoIcon extends Component {
               alignItems: 'center',
             }}
           >
-            <Icon name="thumb-up" color="#FF0000" />
-            <Icon name="thumb-up" color="#00FF00" />
-            <Icon name="thumb-up" color="#0000FF" />
+            <Icon name="thumb-up" color="red" />
+            <Icon name="thumb-up" color="green" />
+            <Icon name="thumb-up" color="blue" />
+            <Icon name="thumb-up" color="yellow" />
           </View>
         </View>
       </View>

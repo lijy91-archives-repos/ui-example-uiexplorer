@@ -8,6 +8,7 @@ import DemoButton from '../screens/DemoButton';
 import DemoCard from '../screens/DemoCard';
 import DemoCheckBox from '../screens/DemoCheckBox';
 import DemoDivider from '../screens/DemoDivider';
+import DemoForm from '../screens/DemoForm';
 import DemoHyperlinkButton from '../screens/DemoHyperlinkButton';
 import DemoIcon from '../screens/DemoIcon';
 import DemoIconButton from '../screens/DemoIconButton';
@@ -31,7 +32,9 @@ import sliceButtonRouteConfigMap from '../screens/SliceButton/routeConfigMap';
 import sliceCardRouteConfigMap from '../screens/SliceCard/routeConfigMap';
 import sliceCheckBoxRouteConfigMap from '../screens/SliceCheckBox/routeConfigMap';
 import sliceDividerRouteConfigMap from '../screens/SliceDivider/routeConfigMap';
+import sliceFormRouteConfigMap from '../screens/SliceForm/routeConfigMap';
 import sliceHyperlinkButtonRouteConfigMap from '../screens/SliceHyperlinkButton/routeConfigMap';
+import sliceIconRouteConfigMap from '../screens/SliceIcon/routeConfigMap';
 import sliceRadioButtonRouteConfigMap from '../screens/SliceRadioButton/routeConfigMap';
 import sliceSubtitleRouteConfigMap from '../screens/SliceSubtitle/routeConfigMap';
 import sliceSwitchRouteConfigMap from '../screens/SliceSwitch/routeConfigMap';
@@ -52,7 +55,9 @@ const sliceRouteConfigMap = {
   ...sliceCardRouteConfigMap,
   ...sliceCheckBoxRouteConfigMap,
   ...sliceDividerRouteConfigMap,
+  ...sliceFormRouteConfigMap,
   ...sliceHyperlinkButtonRouteConfigMap,
+  ...sliceIconRouteConfigMap,
   ...sliceRadioButtonRouteConfigMap,
   ...sliceSubtitleRouteConfigMap,
   ...sliceSwitchRouteConfigMap,
@@ -102,6 +107,10 @@ const routeConfigMap = {
   DemoDivider: {
     screen: DemoDivider,
     path: 'demo-divider',
+  },
+  DemoForm: {
+    screen: DemoForm,
+    path: 'demo-form',
   },
   DemoHyperlinkButton: {
     screen: DemoHyperlinkButton,
