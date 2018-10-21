@@ -123,12 +123,12 @@ class Home extends Component {
           },
           {
             title: 'Icon',
-            description: 'Coming soon',
+            description: 'Icon controls',
             routeName: 'DemoIcon',
           },
           {
             title: 'IconButton',
-            description: 'Coming soon',
+            description: 'Like icon buttons',
             routeName: 'DemoIconButton',
           },
           {

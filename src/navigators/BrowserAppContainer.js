@@ -9,7 +9,7 @@ const getAction = (router, path, params) => {
   }
   return StackActions.reset({
     index: 0,
-    actions: [NavigationActions.navigate({ routeName: 'Initialize' })],
+    actions: [NavigationActions.navigate({ routeName: 'ErrorNotFound' })],
   });
 };
 

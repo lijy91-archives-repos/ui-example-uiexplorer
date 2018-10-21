@@ -1,3 +1,4 @@
+import ErrorNotFound from '../screens/ErrorNotFound';
 import Home from '../screens/Home';
 import ListOfSlices from '../screens/ListOfSlices';
 import DemoActivityIndicator from '../screens/DemoActivityIndicator';
@@ -35,6 +36,7 @@ import sliceDividerRouteConfigMap from '../screens/SliceDivider/routeConfigMap';
 import sliceFormRouteConfigMap from '../screens/SliceForm/routeConfigMap';
 import sliceHyperlinkButtonRouteConfigMap from '../screens/SliceHyperlinkButton/routeConfigMap';
 import sliceIconRouteConfigMap from '../screens/SliceIcon/routeConfigMap';
+import sliceIconButtonRouteConfigMap from '../screens/SliceIconButton/routeConfigMap';
 import sliceRadioButtonRouteConfigMap from '../screens/SliceRadioButton/routeConfigMap';
 import sliceSubtitleRouteConfigMap from '../screens/SliceSubtitle/routeConfigMap';
 import sliceSwitchRouteConfigMap from '../screens/SliceSwitch/routeConfigMap';
@@ -58,6 +60,7 @@ const sliceRouteConfigMap = {
   ...sliceFormRouteConfigMap,
   ...sliceHyperlinkButtonRouteConfigMap,
   ...sliceIconRouteConfigMap,
+  ...sliceIconButtonRouteConfigMap,
   ...sliceRadioButtonRouteConfigMap,
   ...sliceSubtitleRouteConfigMap,
   ...sliceSwitchRouteConfigMap,
@@ -68,6 +71,9 @@ const sliceRouteConfigMap = {
 };
 
 const routeConfigMap = {
+  ErrorNotFound: {
+    screen: ErrorNotFound,
+  },
   Home: {
     screen: Home,
     path: '',
