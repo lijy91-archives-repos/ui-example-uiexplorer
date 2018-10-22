@@ -14,6 +14,7 @@
   },
   "pre-commit": [],
   "dependencies": {
+    "@blankapp/plugin-i18n": "git+https://github.com/blankapp/plugin-i18n",
     "@blankapp/ui": "file:../ui",
     "@blankapp/ui-pro": "file:../ui-pro",
     "prop-types": "^15.6.1",

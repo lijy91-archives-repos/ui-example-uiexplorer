@@ -3,5 +3,28 @@ export default {
   globals: {
   },
   screens: {
+    home: {
+      sectionItemBasicComponents: 'Basic components',
+      sectionItemAdvancedComponents: 'Advanced components',
+      listItemDescriptionActivityIndicator: 'Indicate that something is ongoing',
+      listItemDescriptionAvatar: 'Avatar controls',
+      listItemDescriptionBadge: 'Small count controls',
+      listItemDescriptionButton: 'Flat and outline buttons',
+      listItemDescriptionCard: 'Various card layout styles',
+      listItemDescriptionCheckBox: 'Multi-selection controls',
+      listItemDescriptionDivider: 'Used to separate distinct content sections',
+      listItemDescriptionForm: 'Form controls',
+      listItemDescriptionHyperlinkButton: 'Like hyperlink buttons',
+      listItemDescriptionModal: 'Coming soon',
+      listItemDescriptionRadioButton: 'Single selection controls',
+      listItemDescriptionSubtitle: 'Subtitle text display controls',
+      listItemDescriptionSwitch: 'On off switches',
+      listItemDescriptionText: 'Single and multi-line text display controls',
+      listItemDescriptionTextInput: 'Single and multi-line text edit controls',
+      listItemDescriptionTitle: 'Title text display controls',
+      listItemDescriptionView: 'A special view that can contain other views',
+      listItemDescriptionIcon: 'Icon controls',
+      listItemDescriptionIconButton: 'Like icon buttons',
+    },
   },
 };

@@ -8,6 +8,7 @@ import {
   Title,
   View,
 } from '@blankapp/ui';
+import { t } from '@blankapp/plugin-i18n';
 
 class Home extends Component {
   static navigationOptions = {
@@ -24,97 +25,97 @@ class Home extends Component {
 
     const sectionsSource = [
       {
-        title: 'Basic components',
+        title: t('screens.home.sectionItemBasicComponents'),
         data: [
           {
             title: 'ActivityIndicator',
-            description: 'Indicate that something is ongoing',
+            description: t('screens.home.listItemDescriptionActivityIndicator'),
             routeName: 'DemoActivityIndicator',
           },
           {
             title: 'Avatar',
-            description: 'Avatar controls',
+            description: t('screens.home.listItemDescriptionAvatar'),
             routeName: 'DemoAvatar',
           },
           {
             title: 'Badge',
-            description: 'Small count controls',
+            description: t('screens.home.listItemDescriptionBadge'),
             routeName: 'DemoBadge',
           },
           {
             title: 'Button',
-            description: 'Flat and outline buttons',
+            description: t('screens.home.listItemDescriptionButton'),
             routeName: 'DemoButton',
           },
           {
             title: 'Card',
-            description: 'Various card layout styles',
+            description: t('screens.home.listItemDescriptionCard'),
             routeName: 'DemoCard',
           },
           {
             title: 'CheckBox',
-            description: 'Multi-selection controls',
+            description: t('screens.home.listItemDescriptionCheckBox'),
             routeName: 'DemoCheckBox',
           },
           {
             title: 'Divider',
-            description: 'Used to separate distinct content sections',
+            description: t('screens.home.listItemDescriptionDivider'),
             routeName: 'DemoDivider',
           },
           {
             title: 'Form',
-            description: 'Form controls',
+            description: t('screens.home.listItemDescriptionForm'),
             routeName: 'DemoForm',
           },
           {
             title: 'HyperlinkButton',
-            description: 'Like hyperlink buttons',
+            description: t('screens.home.listItemDescriptionHyperlinkButton'),
             routeName: 'DemoHyperlinkButton',
           },
           {
             title: 'Modal',
-            description: 'Coming soon',
+            description: t('screens.home.listItemDescriptionModal'),
             routeName: 'DemoModal',
           },
           {
             title: 'RadioButton',
-            description: 'Single selection controls',
+            description: t('screens.home.listItemDescriptionRadioButton'),
             routeName: 'DemoRadioButton',
           },
           {
             title: 'Subtitle',
-            description: 'Subtitle text display controls',
+            description: t('screens.home.listItemDescriptionSubtitle'),
             routeName: 'DemoSubtitle',
           },
           {
             title: 'Switch',
-            description: 'On off switches',
+            description: t('screens.home.listItemDescriptionSwitch'),
             routeName: 'DemoSwitch',
           },
           {
             title: 'Text',
-            description: 'Single and multi-line text display controls',
+            description: t('screens.home.listItemDescriptionText'),
             routeName: 'DemoText',
           },
           {
             title: 'TextInput',
-            description: 'Single and multi-line text edit controls',
+            description: t('screens.home.listItemDescriptionTextInput'),
             routeName: 'DemoTextInput',
           },
           {
             title: 'Title',
-            description: 'Title text display controls',
+            description: t('screens.home.listItemDescriptionTitle'),
             routeName: 'DemoTitle',
           },
           {
             title: 'View',
-            description: 'A special view that can contain other views',
+            description: t('screens.home.listItemDescriptionView'),
             routeName: 'DemoView',
           },
         ],
       },
       {
-        title: 'Advanced components',
+        title: t('screens.home.sectionItemAdvancedComponents'),
         data: [
           {
             title: 'AppBar',
@@ -123,12 +124,12 @@ class Home extends Component {
           },
           {
             title: 'Icon',
-            description: 'Icon controls',
+            description: t('screens.home.listItemDescriptionIcon'),
             routeName: 'DemoIcon',
           },
           {
             title: 'IconButton',
-            description: 'Like icon buttons',
+            description: t('screens.home.listItemDescriptionIconButton'),
             routeName: 'DemoIconButton',
           },
           {
