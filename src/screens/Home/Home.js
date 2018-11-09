@@ -1,19 +1,17 @@
 import React, { Component } from 'react';
-import { SectionList, TouchableOpacity } from 'react-native';
+import { SectionList } from 'react-native';
 import {
-  Divider,
+  ListItem,
   Screen,
-  Subtitle,
   Text,
-  Title,
   View,
 } from '@blankapp/ui';
 import { t } from '@blankapp/plugin-i18n';
+import NavigationService from '../../navigators/NavigationService';
 
 class Home extends Component {
   static navigationOptions = {
     title: 'UIExplorer',
-    headerLeft: null,
   };
 
   constructor(props) {
@@ -68,9 +66,19 @@ class Home extends Component {
             routeName: 'DemoForm',
           },
           {
+            title: 'Grid',
+            description: t('screens.home.listItemDescriptionGrid'),
+            routeName: 'DemoGrid',
+          },
+          {
             title: 'HyperlinkButton',
             description: t('screens.home.listItemDescriptionHyperlinkButton'),
             routeName: 'DemoHyperlinkButton',
+          },
+          {
+            title: 'ListItem',
+            description: t('screens.home.listItemDescriptionListItem'),
+            routeName: 'DemoListItem',
           },
           {
             title: 'Modal',
@@ -119,7 +127,7 @@ class Home extends Component {
         data: [
           {
             title: 'AppBar',
-            description: 'Coming soon',
+            description: t('screens.home.listItemDescriptionAppBar'),
             routeName: 'DemoAppBar',
           },
           {
@@ -131,11 +139,6 @@ class Home extends Component {
             title: 'IconButton',
             description: t('screens.home.listItemDescriptionIconButton'),
             routeName: 'DemoIconButton',
-          },
-          {
-            title: 'ListItem',
-            description: 'Coming soon',
-            routeName: 'DemoListItem',
           },
           {
             title: 'TabBar',
@@ -156,8 +159,8 @@ class Home extends Component {
     };
   }
 
-  pressItem(item) {
-    this.navigation.navigate(item.routeName);
+  handlePressItem(item) {
+    NavigationService.navigate(item.routeName);
   }
 
   renderSectionHeader({ section }) {
@@ -182,33 +185,24 @@ class Home extends Component {
 
   renderItem({ item }) {
     return (
-      <TouchableOpacity
+      <ListItem
         activeOpacity={0.8}
-        onPress={() => this.pressItem(item)}
-      >
-        <View
-          style={{
-            paddingTop: 10,
-            paddingBottom: 10,
-            paddingLeft: 15,
-            paddingRight: 15,
-            minHeight: 64,
-          }}
-        >
-          <Title>{item.title}</Title>
-          <Subtitle>{item.description}</Subtitle>
-        </View>
-      </TouchableOpacity>
+        onPress={() => this.handlePressItem(item)}
+        title={item.title}
+        detailText={item.description}
+      />
     );
   }
 
   render() {
     return (
-      <Screen>
+      <Screen
+        barStyle="light-content"
+      >
         <SectionList
           renderItem={this.renderItem}
           sections={this.state.sectionsSource}
-          ItemSeparatorComponent={() => <Divider />}
+          ItemSeparatorComponent={() => <ListItem.Divider />}
           renderSectionHeader={this.renderSectionHeader}
           keyExtractor={item => `${item.routeName}`}
         />

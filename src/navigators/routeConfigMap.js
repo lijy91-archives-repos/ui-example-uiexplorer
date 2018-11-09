@@ -10,6 +10,7 @@ import DemoCard from '../screens/DemoCard';
 import DemoCheckBox from '../screens/DemoCheckBox';
 import DemoDivider from '../screens/DemoDivider';
 import DemoForm from '../screens/DemoForm';
+import DemoGrid from '../screens/DemoGrid';
 import DemoHyperlinkButton from '../screens/DemoHyperlinkButton';
 import DemoIcon from '../screens/DemoIcon';
 import DemoIconButton from '../screens/DemoIconButton';
@@ -34,6 +35,7 @@ import sliceCardRouteConfigMap from '../screens/SliceCard/routeConfigMap';
 import sliceCheckBoxRouteConfigMap from '../screens/SliceCheckBox/routeConfigMap';
 import sliceDividerRouteConfigMap from '../screens/SliceDivider/routeConfigMap';
 import sliceFormRouteConfigMap from '../screens/SliceForm/routeConfigMap';
+import sliceGridRouteConfigMap from '../screens/SliceGrid/routeConfigMap';
 import sliceHyperlinkButtonRouteConfigMap from '../screens/SliceHyperlinkButton/routeConfigMap';
 import sliceIconRouteConfigMap from '../screens/SliceIcon/routeConfigMap';
 import sliceIconButtonRouteConfigMap from '../screens/SliceIconButton/routeConfigMap';
@@ -58,6 +60,7 @@ const sliceRouteConfigMap = {
   ...sliceCheckBoxRouteConfigMap,
   ...sliceDividerRouteConfigMap,
   ...sliceFormRouteConfigMap,
+  ...sliceGridRouteConfigMap,
   ...sliceHyperlinkButtonRouteConfigMap,
   ...sliceIconRouteConfigMap,
   ...sliceIconButtonRouteConfigMap,
@@ -118,6 +121,10 @@ const routeConfigMap = {
     screen: DemoForm,
     path: 'demo-form',
   },
+  DemoGrid: {
+    screen: DemoGrid,
+    path: 'demo-grid',
+  },
   DemoHyperlinkButton: {
     screen: DemoHyperlinkButton,
     path: 'demo-hyperlinkbutton',
@@ -132,7 +139,7 @@ const routeConfigMap = {
   },
   DemoListItem: {
     screen: DemoListItem,
-    path: 'demo-iconbutton',
+    path: 'demo-listitem',
   },
   DemoModal: {
     screen: DemoModal,

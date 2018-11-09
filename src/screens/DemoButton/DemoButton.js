@@ -85,6 +85,12 @@ class DemoButton extends Component {
           >
             <Button text="Button" fluid />
           </View>
+          <Subtitle>Circular</Subtitle>
+          <View
+            style={buttonPanelStyle}
+          >
+            <Button text="OK" circular />
+          </View>
         </View>
       </View>
     );

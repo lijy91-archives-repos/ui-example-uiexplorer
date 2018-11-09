@@ -5,6 +5,7 @@ import I18n from '@blankapp/plugin-i18n';
 import defaultTheme from '@blankapp/ui/src/resources/themes/default';
 import defaultThemePro from '@blankapp/ui-pro/src/resources/themes/default';
 import AppNavigator from './navigators/AppNavigator';
+import NavigationService from './navigators/NavigationService';
 import languages from './resources/locales';
 
 Theme.registerTheme('default', [
@@ -25,8 +26,9 @@ class App extends Component {
     return (
       <ThemeProvider>
         <AppNavigator
-          ref={(nav) => {
-            this.navigator = nav;
+          ref={(navigatorRef) => {
+            this.topLevelNavigator = navigatorRef;
+            NavigationService.setTopLevelNavigator(navigatorRef);
           }}
         />
       </ThemeProvider>

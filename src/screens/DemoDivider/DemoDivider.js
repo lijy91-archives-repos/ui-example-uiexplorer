@@ -59,6 +59,33 @@ class DemoDivider extends Component {
               <Divider orientation="vertical" />
             </View>
           </View>
+          <Subtitle>Label</Subtitle>
+          <View
+            style={{
+              height: 200,
+              flexDirection: 'row',
+            }}
+          >
+            <View
+              style={{
+                flex: 1,
+                flexDirection: 'row',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              <Divider orientation="horizontal" label="OR" />
+            </View>
+            <View
+              style={{
+                flex: 1,
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              <Divider orientation="vertical">OR</Divider>
+            </View>
+          </View>
         </View>
       </View>
     );

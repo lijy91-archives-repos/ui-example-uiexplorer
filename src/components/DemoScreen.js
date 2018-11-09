@@ -19,6 +19,7 @@ class DemoScreen extends PureComponent {
     const {
       HeaderComponent,
       ContentComponent,
+      ...restProps
     } = this.props;
 
     const headerView = HeaderComponent && HeaderComponent();
@@ -31,15 +32,22 @@ class DemoScreen extends PureComponent {
       justifyContent: 'center',
     };
     const contentStyle = {
-      padding: 10,
+      padding: 16,
     };
     return (
-      <Screen>
+      <Screen
+        {...restProps}
+      >
         <ScrollView>
           <View style={headerStyle}>
             {headerView}
           </View>
-          <View style={contentStyle}>
+          <View
+            style={[
+              contentStyle,
+              restProps.contentStyle,
+            ]}
+          >
             {contentView}
           </View>
         </ScrollView>

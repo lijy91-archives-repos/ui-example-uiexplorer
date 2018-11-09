@@ -5,6 +5,7 @@
 # Xcode
 #
 build/
+Pods/
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -19,6 +20,7 @@ xcuserdata
 DerivedData
 *.hmap
 *.ipa
+*.dSYM.zip
 *.xcuserstate
 project.xcworkspace
 
@@ -29,10 +31,14 @@ build/
 .gradle
 local.properties
 *.iml
+.project
+.settings
+.classpath
 
 # node.js
 #
 node_modules/
+package-lock.json
 npm-debug.log
 yarn-error.log
 

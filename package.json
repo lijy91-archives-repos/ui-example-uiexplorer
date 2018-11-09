@@ -17,16 +17,15 @@
     "@blankapp/plugin-i18n": "git+https://github.com/blankapp/plugin-i18n",
     "@blankapp/ui": "file:../ui",
     "@blankapp/ui-pro": "file:../ui-pro",
-    "prop-types": "^15.6.1",
+    "prop-types": "^15.6.2",
     "query-string": "5.1.1",
-    "react": "16.4.0",
-    "react-art": "16.4.0",
-    "react-dom": "16.4.0",
+    "react": "16.5.1",
+    "react-art": "16.5.1",
+    "react-dom": "16.5.1",
     "react-native": "0.55.4",
-    "react-native-vector-icons": "5.0.0",
-    "react-native-web": "^0.8.3",
-    "react-navigation": "^2.13.0",
-    "react-navigation-stack": "^0.3.0"
+    "react-native-vector-icons": "^6.0.2",
+    "react-native-web": "^0.9.6",
+    "react-navigation": "^2.18.2"
   },
   "devDependencies": {
     "autoprefixer": "^7.2.6",

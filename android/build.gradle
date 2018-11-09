@@ -3,9 +3,10 @@
 buildscript {
     repositories {
         jcenter()
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.1'
+        classpath 'com.android.tools.build:gradle:3.1.4'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -19,6 +20,27 @@ allprojects {
         maven {
             // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
             url "$rootDir/../node_modules/react-native/android"
+        }
+        google()
+    }
+}
+
+ext {
+    buildToolsVersion = BUILD_TOOLS_VERSION
+    minSdkVersion = Integer.parseInt(MIN_SDK_VERSION)
+    compileSdkVersion = Integer.parseInt(COMPILE_SDK_VERSION)
+    targetSdkVersion = Integer.parseInt(TARGET_SDK_VERSION)
+    supportLibVersion = "27.1.0"
+    glideVersion = "4.7.1"
+}
+
+subprojects { subproject ->
+    afterEvaluate {
+        if ((subproject.plugins.hasPlugin('android') || subproject.plugins.hasPlugin('android-library'))) {
+            android {
+                compileSdkVersion rootProject.ext.compileSdkVersion
+                buildToolsVersion rootProject.ext.buildToolsVersion
+            }
         }
     }
 }

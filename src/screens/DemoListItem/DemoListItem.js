@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Text, View } from '@blankapp/ui';
-// import { ListItem } from '@blankapp/ui-pro';
+import { FlatList } from 'react-native';
+import { ListItem, Text, View } from '@blankapp/ui';
 import DemoScreen from '../../components/DemoScreen';
+import img1 from '../../resources/images/img1.png';
 
 class DemoListItem extends Component {
   static navigationOptions = {
@@ -14,10 +15,31 @@ class DemoListItem extends Component {
     );
   }
 
+  renderItem({ item }) {
+    return (
+      <ListItem
+        {...item}
+        // renderImage={() => (<Image source={item.imageSource} />)}
+      />
+    );
+  }
+
   renderContent() {
+    const itemsSource = [
+      { title: 'TITLE' },
+      { title: 'TITLE', detailText: 'DETAIL TEXT' },
+      { title: 'TITLE', detailText: 'DETAIL TEXT' },
+      { title: 'TITLE', detailText: 'DETAIL TEXT' },
+      { title: 'TITLE', detailText: 'DETAIL TEXT' },
+      { imageSource: img1, title: 'TITLE', detailText: 'DETAIL TEXT' },
+    ].map((v, index) => Object.assign(v, { title: `${index}. ${v.title}`, onPress: () => {} }));
     return (
       <View>
-        <Text>No demos</Text>
+        <FlatList
+          data={itemsSource}
+          renderItem={this.renderItem}
+          ItemSeparatorComponent={() => <ListItem.Divider />}
+        />
       </View>
     );
   }
@@ -27,6 +49,11 @@ class DemoListItem extends Component {
       <DemoScreen
         HeaderComponent={() => this.renderHeader()}
         ContentComponent={() => this.renderContent()}
+        contentStyle={{
+          padding: 0,
+          paddingLeft: 0,
+          paddingRight: 0,
+        }}
       />
     );
   }

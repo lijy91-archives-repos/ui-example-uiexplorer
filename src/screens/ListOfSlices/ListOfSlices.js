@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import { FlatList, TouchableOpacity } from 'react-native';
+import { FlatList } from 'react-native';
 import {
-  Divider,
+  ListItem,
   Screen,
-  Subtitle,
-  Title,
-  View,
 } from '@blankapp/ui';
+import NavigationService from '../../navigators/NavigationService';
 import { sliceRouteConfigMap } from '../../navigators/routeConfigMap';
 
 class ListOfSlices extends Component {
@@ -36,24 +34,13 @@ class ListOfSlices extends Component {
   renderItem({ item }) {
     const { routeName, path: routePath } = item;
     return (
-      <TouchableOpacity
+      <ListItem
+        title={routeName}
+        detailText={routePath}
         onPress={() => {
-          this.props.navigation.navigate(routeName);
+          NavigationService.navigate(routeName);
         }}
-      >
-        <View
-          key={routeName}
-          style={{
-            paddingTop: 15,
-            paddingRight: 15,
-            paddingBottom: 15,
-            paddingLeft: 15,
-          }}
-        >
-          <Title>{routeName}</Title>
-          <Subtitle>{routePath}</Subtitle>
-        </View>
-      </TouchableOpacity>
+      />
     );
   }
 
@@ -63,7 +50,7 @@ class ListOfSlices extends Component {
         <FlatList
           renderItem={this.renderItem}
           data={this.state.itemsSource}
-          ItemSeparatorComponent={() => <Divider />}
+          ItemSeparatorComponent={() => <ListItem.Divider />}
         />
       </Screen>
     );
