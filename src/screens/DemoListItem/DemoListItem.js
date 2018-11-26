@@ -19,18 +19,28 @@ class DemoListItem extends Component {
     return (
       <ListItem
         {...item}
-        // renderImage={() => (<Image source={item.imageSource} />)}
       />
     );
   }
 
   renderContent() {
     const itemsSource = [
-      { title: 'TITLE' },
-      { title: 'TITLE', detailText: 'DETAIL TEXT' },
-      { title: 'TITLE', detailText: 'DETAIL TEXT' },
-      { title: 'TITLE', detailText: 'DETAIL TEXT' },
-      { title: 'TITLE', detailText: 'DETAIL TEXT' },
+      {
+        title: 'TITLE',
+      },
+      {
+        title: 'TITLE',
+        accessoryType: ListItem.accessoryTypes.DisclosureIndicator,
+      },
+      {
+        title: 'TITLE',
+        detailText: 'DETAIL TEXT',
+      },
+      {
+        title: 'TITLE',
+        detailText: 'DETAIL TEXT',
+        accessoryType: ListItem.accessoryTypes.DisclosureIndicator,
+      },
       { imageSource: img1, title: 'TITLE', detailText: 'DETAIL TEXT' },
     ].map((v, index) => Object.assign(v, { title: `${index}. ${v.title}`, onPress: () => {} }));
     return (
